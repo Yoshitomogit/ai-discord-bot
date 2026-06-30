@@ -1,0 +1,25 @@
+name: Shindanshi News Bot
+
+on:
+  schedule:
+    - cron: "0 12 */3 * *"  # 3日に1回 12:00 UTC = JST 21:00
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run bot (one-shot)
+        env:
+          DISCORD_TOKEN:         ${{ secrets.DISCORD_TOKEN }}
+          SHINDANSHI_CHANNEL_ID: ${{ secrets.SHINDANSHI_CHANNEL_ID }}
+        run: python post_shindanshi.py
