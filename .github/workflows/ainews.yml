@@ -2,7 +2,7 @@ name: AI News Bot
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # 毎日 00:00 UTC = JST 09:00
+    - cron: "0 0 */3 * *"  # 3日に1回 00:00 UTC = JST 09:00
   workflow_dispatch:        # 手動実行ボタンも有効化
 
 jobs:
