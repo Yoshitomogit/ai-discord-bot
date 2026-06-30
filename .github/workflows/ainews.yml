@@ -1,0 +1,26 @@
+name: AI News Bot
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # 毎日 00:00 UTC = JST 09:00
+  workflow_dispatch:        # 手動実行ボタンも有効化
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run bot (one-shot)
+        env:
+          DISCORD_TOKEN:      ${{ secrets.DISCORD_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: python post_once.py
