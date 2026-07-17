@@ -6,15 +6,18 @@ fetchers.py
   - Reddit JSON API  (認証不要)
   - Hacker News Algolia Search API (認証不要)
   - 公式ブログ RSS / Web スクレイピング
+  - Google News RSS (日本語・一般メディア、認証不要)
   - Twitter/X API v2  (Bearer Token が必要)
 """
 
 import asyncio
+import math
 import os
 import re
+import urllib.parse
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 import aiohttp
@@ -57,6 +60,41 @@ RSS_FEEDS = [
     ("Cursor",     "https://cursor.com/blog/rss"),
 ]
 
+# Google News RSS (日本語) 検索クエリ — 一般メディアの報道を拾う
+GOOGLE_NEWS_QUERIES = {
+    "gemini":  "Google Gemini",
+    "chatgpt": "ChatGPT OR OpenAI",
+    "copilot": "Microsoft Copilot OR GitHub Copilot",
+    "claude":  "Claude Anthropic",
+    "cursor":  "Cursor AI エディタ",
+}
+
+# この日数より古い記事は投稿対象にしない（3日ごとの実行に余裕を持たせる）
+RECENT_DAYS = 5
+
+# 一般の関心を惹きやすい話題のキーワード（含まれるほど加点）
+GENERAL_INTEREST_KEYWORDS = [
+    # 生活・社会への影響
+    "無料", "料金", "値上げ", "値下げ", "有料", "公開", "発表", "開始", "提供",
+    "規制", "禁止", "訴訟", "著作権", "プライバシー", "偽情報", "詐欺",
+    "教育", "学校", "受験", "仕事", "雇用", "転職", "副業", "日本", "国内",
+    "音楽", "映画", "アニメ", "イラスト", "画像生成", "動画生成", "音声",
+    "スマホ", "アプリ", "iphone", "android", "検索", "調査", "利用者",
+    # 英語圏の一般ニュース
+    "free", "price", "launch", "release", "ban", "lawsuit", "copyright",
+    "privacy", "regulation", "school", "education", "job", "work",
+    "music", "movie", "video", "image", "voice", "app", "smartphone",
+]
+
+# 技術者以外には伝わりにくいキーワード（含まれるほど減点）
+TECHNICAL_KEYWORDS = [
+    "api", "sdk", "cli", "benchmark", "fine-tun", "finetun", "quantiz",
+    "inference", "token", "context window", "weights", "embedding",
+    "paper", "arxiv", "rag", "mmlu", "gpu", "cuda", "self-host",
+    "llama.cpp", "ollama", "vram", "open weights", "distill",
+    "実装", "ベンチマーク", "推論速度", "量子化", "ローカルllm",
+]
+
 
 # ─── ユーティリティ ────────────────────────────────────────────────────────
 
@@ -67,6 +105,49 @@ def detect_tag(text: str) -> Optional[str]:
         if any(kw in lower for kw in keywords):
             return tag
     return None
+
+
+def title_key(title: str) -> str:
+    """タイトルを正規化して重複判定用のキーを作る。
+
+    Google News のタイトル末尾に付く「 - 媒体名」を除去し、
+    記号・空白を落として同じ話題の記事を同一視できるようにする。
+    """
+    t = title
+    if " - " in t:
+        head, tail = t.rsplit(" - ", 1)
+        if len(tail) <= 25:
+            t = head
+    t = re.sub(r"[^0-9a-zA-Zぁ-んァ-ヶ一-龠ー]", "", t.lower())
+    return t[:80]
+
+
+def interest_score(a: "Article") -> float:
+    """一般の読者にとっての関心度を推定するスコア。
+
+    エンゲージメント数そのままだと技術コミュニティの話題が常に上位に
+    来るため、一般メディア報道・生活に関わるキーワードを加点し、
+    技術用語の多い記事を減点する。
+    """
+    lower = f"{a.title} {a.summary}".lower()
+    score = 0.0
+
+    # 一般メディアに報道された話題を優先
+    if a.source == "GoogleNews":
+        score += 50
+    elif a.source.startswith("Blog"):
+        score += 25
+
+    # エンゲージメントは対数で頭打ちにする（Reddit の数千 upvote に引きずられない）
+    score += min(30.0, math.log10(max(a.score, 1)) * 10)
+
+    boosts = sum(1 for kw in GENERAL_INTEREST_KEYWORDS if kw in lower)
+    score += min(boosts, 3) * 15
+
+    penalties = sum(1 for kw in TECHNICAL_KEYWORDS if kw in lower)
+    score -= min(penalties, 3) * 20
+
+    return score
 
 
 def _parse_dt(s: str) -> datetime:
@@ -126,13 +207,15 @@ async def fetch_hackernews(session: aiohttp.ClientSession, limit: int = 5) -> li
     """Algolia HN Search API でキーワード検索。"""
     results = []
     search_terms = ["Gemini AI", "ChatGPT", "GitHub Copilot", "Claude Anthropic", "Cursor IDE"]
+    # 直近 RECENT_DAYS 日以内の記事のみ（固定値だと毎回同じ歴代人気記事が返る）
+    cutoff_unix = int((datetime.now(tz=timezone.utc) - timedelta(days=RECENT_DAYS)).timestamp())
 
     for term in search_terms:
         url = (
             "https://hn.algolia.com/api/v1/search"
             f"?query={aiohttp.helpers.quote(term)}"
             "&tags=story"
-            "&numericFilters=created_at_i>1700000000"  # 最近の記事
+            f"&numericFilters=created_at_i>{cutoff_unix}"
             f"&hitsPerPage={limit}"
         )
         try:
@@ -221,6 +304,49 @@ async def fetch_rss(session: aiohttp.ClientSession, limit: int = 3) -> list[Arti
     return results[:limit * len(TAGS)]
 
 
+# ─── Google News RSS (日本語・一般メディア) ────────────────────────────────
+
+async def fetch_google_news(session: aiohttp.ClientSession, limit: int = 5) -> list[Article]:
+    """Google News RSS (日本語) から一般メディアの報道を取得。"""
+    results = []
+    headers = {"User-Agent": "Mozilla/5.0 (AI-Discord-Bot)"}
+
+    for tag, query in GOOGLE_NEWS_QUERIES.items():
+        encoded = urllib.parse.quote(f"{query} when:{RECENT_DAYS}d")
+        url = f"https://news.google.com/rss/search?q={encoded}&hl=ja&gl=JP&ceid=JP:ja"
+        try:
+            async with session.get(url, headers=headers, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+                if resp.status != 200:
+                    continue
+                text = await resp.text()
+                root = ET.fromstring(text)
+                for item in root.findall(".//item")[:limit]:
+                    title_el = item.find("title")
+                    link_el = item.find("link")
+                    date_el = item.find("pubDate")
+
+                    title = (title_el.text or "").strip() if title_el is not None else ""
+                    link = (link_el.text or "").strip() if link_el is not None else ""
+                    date_str = (date_el.text or "") if date_el is not None else ""
+
+                    if not title or not link:
+                        continue
+
+                    results.append(Article(
+                        title=title[:200],
+                        url=link,
+                        source="GoogleNews",
+                        score=0,  # エンゲージメント指標なし。interest_score のソース加点で優先される
+                        published=_parse_dt(date_str) if date_str else datetime.now(tz=timezone.utc),
+                        tag=tag,
+                    ))
+        except Exception:
+            continue
+        await asyncio.sleep(0.3)
+
+    return results
+
+
 # ─── Twitter / X API v2 ────────────────────────────────────────────────────
 
 async def fetch_twitter(session: aiohttp.ClientSession, limit: int = 5) -> list[Article]:
@@ -279,28 +405,48 @@ async def fetch_twitter(session: aiohttp.ClientSession, limit: int = 5) -> list[
 
 # ─── メイン収集関数 ────────────────────────────────────────────────────────
 
-async def fetch_all(limit_per_source: int = 5) -> dict[str, list[Article]]:
+async def fetch_all(
+    limit_per_source: int = 5,
+    exclude_urls: Optional[set[str]] = None,
+    exclude_title_keys: Optional[set[str]] = None,
+) -> dict[str, list[Article]]:
     """
     全ソースから収集してタグ別に分類して返す。
     戻り値: {"gemini": [...], "chatgpt": [...], ...}
+
+    exclude_urls / exclude_title_keys に投稿済み記事の URL・タイトルキーを
+    渡すと除外される（同じ記事の再投稿防止）。
     """
+    exclude_urls = exclude_urls or set()
+    exclude_title_keys = exclude_title_keys or set()
+
     async with aiohttp.ClientSession() as session:
-        reddit, hn, rss, tw = await asyncio.gather(
+        reddit, hn, rss, gnews, tw = await asyncio.gather(
             fetch_reddit(session, limit_per_source),
             fetch_hackernews(session, limit_per_source),
             fetch_rss(session, limit_per_source),
+            fetch_google_news(session, limit_per_source),
             fetch_twitter(session, limit_per_source),
         )
 
-    all_articles = reddit + hn + rss + tw
+    all_articles = reddit + hn + rss + gnews + tw
+    cutoff = datetime.now(tz=timezone.utc) - timedelta(days=RECENT_DAYS)
 
-    # タグ別に分類・重複URL除去・スコア降順
+    # タグ別に分類・古い記事と投稿済み/重複記事を除去・関心度スコア降順
     categorized: dict[str, list[Article]] = {tag: [] for tag in TAGS}
-    seen_urls = set()
-    for article in sorted(all_articles, key=lambda a: a.score, reverse=True):
-        if article.url in seen_urls:
+    seen_urls: set[str] = set()
+    seen_titles: set[str] = set()
+    for article in sorted(all_articles, key=interest_score, reverse=True):
+        if article.published < cutoff:
+            continue
+        if article.url in exclude_urls or article.url in seen_urls:
+            continue
+        key = title_key(article.title)
+        if key and (key in exclude_title_keys or key in seen_titles):
             continue
         seen_urls.add(article.url)
+        if key:
+            seen_titles.add(key)
         categorized[article.tag].append(article)
 
     # 各タグ上位 3 件に絞る

@@ -12,6 +12,7 @@ from deep_translator import GoogleTranslator
 from dotenv import load_dotenv
 
 from fetchers import fetch_all, Article
+from history import load_history, exclude_sets, record_posted, save_history
 
 load_dotenv()
 
@@ -26,7 +27,7 @@ TAG_META = {
     "cursor":  {"label": "Cursor",            "color": 0xFF6B35, "emoji": "🟠"},
 }
 
-SOURCE_ICON = {"Reddit": "📋", "HackerNews": "🔶", "Twitter/X": "🐦"}
+SOURCE_ICON = {"Reddit": "📋", "HackerNews": "🔶", "Twitter/X": "🐦", "GoogleNews": "🗞️"}
 
 translator = GoogleTranslator(source="auto", target="ja")
 
@@ -97,7 +98,13 @@ async def main():
                 channel = await client.fetch_channel(CHANNEL_ID)
 
             print("情報収集中…")
-            categorized = await fetch_all(limit_per_source=5)
+            history = load_history()
+            posted_urls, posted_titles = exclude_sets(history)
+            categorized = await fetch_all(
+                limit_per_source=5,
+                exclude_urls=posted_urls,
+                exclude_title_keys=posted_titles,
+            )
 
             today = datetime.now(tz=timezone.utc).strftime("%Y/%m/%d")
             await channel.send(
@@ -110,6 +117,10 @@ async def main():
             for i in range(0, len(embeds), 10):
                 await channel.send(embeds=embeds[i:i+10])
                 await asyncio.sleep(1)
+
+            # 投稿した記事を履歴に保存（次回以降の重複防止）
+            record_posted(history, [a for arts in categorized.values() for a in arts])
+            save_history(history)
 
             print("投稿完了。")
         finally:
