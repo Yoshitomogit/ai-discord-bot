@@ -298,5 +298,80 @@
   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9CbDROVWVUNXQ5WTh5R1h5TFNSSS1zTWtrWGpaMl9wdzltT0tzekhEY3BOSHJBS0JPRThHczIzLUpNRlZzaWoyNUcxQTVKdk1Bc1J2aDIxVVF5UGk4YjYtcXRwZ9IBaEFVX3lxTE9jSkFxRmIzOVY3d1g0VzI0SGg5cjlHVU1tRnE4RDJEZjA5b0EtN3pjRFA0SEZjTjhpS3RmVUIxOUN6cWtjNmFBaFN1WWhORm1wUHM5LWRNZ1g4ck02VExPVDBzd2xRcy1h?oc=5",
   "title_key": "ai開発ツールcursorに深刻なゼロデイ脆弱性windows環境でリポジトリを開くだけで任意のコードが実行される恐れ",
   "date": "2026-07-19"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwUFZaVG5CcVpVSUVrMDUtLUhyOGU3N2szclpiWHFnbWFBNV9RNkdMUm93ZndWQTZ1TzZJQUFHTGRma0phSy1ZWjV5VGJiNVQxWFd1Z0JrZVVFTG0xa2JxZWF2YkpjZ0l4YTEwNg?oc=5",
+  "title_key": "googlegemini36flashなど3モデルを発表出力トークンを削減しつつ値下げgemini4も予告",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8yWTRLLVhGVnFXcUlSOHRYSXBmZE82ZzhWU3VxUGpreUc4WWhPWGtLZ0FURklJTXRpbVNuNk1JWkFyNklvZWJtS3RGZjlZck5HSnV4VklkY1NiWk9nREk2czZZQUZORWpEZFFKNUpETmNMbEVOVWRNMWhCcDlfLUE?oc=5",
+  "title_key": "googleがgemini新モデル3本を同時発表aiエージェント向けに効率速度コストを強化テクノエッジ",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1HZHgtNW5VZDJYWkZqSDR0M0xPMzk2d0FCaGhkQnVHM0dkc0h0R1NRLUM0ZHBSa2NUc211NFo1N3lpQ3EzejU0cUhwQWc3ZnVvSFE?oc=5",
+  "title_key": "googleがgemini36発表その次gemini4は最も野心的とも予告",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE56NVM1QlFHMmJsSm51UzhtcWFaeUFFQ0YySWhZMl9CQTlkRXdFOFJRQnNjZVZsNGo5ZnZWWmtWTllFa180WjIyejNqWnhrdGtVNUpZ?oc=5",
+  "title_key": "米openaiのchatgptworkの利用者が1000万人に到達anthropicのcoworkとの競争激化",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE42OXdLa21XcDE0MGxhR0p2NXRSUklNUmJNUFNfaENWQ1N6NFVJOVZEZW85eGhaT0pYOWNfY01CTGdWWEZyOUxvZEVHdlBsVzRQWlByS1VncjEydFFmenVYWDQwZUVycDZCQ0Z2Tw?oc=5",
+  "title_key": "openai開発中のaiがサイバー攻撃他社システムに誤侵入",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40SDZtQmxTeWpzU0d3aDZrWDBydnh1eklBSTFkaTZXUkRIZVBGcnlxa1RieUpxcV93NU1XTEFGRnJGQXM3ODlNOWw1S0JUbXlDTElQYjgzSFJndHBncTcyYWZvT2dwOG4zX3VhdGl6N2JlOW1jd1JvTndtX09aU1E?oc=5",
+  "title_key": "huggingface侵害のaiエージェントはopenaiのモデル社内のサイバー能力評価中にgpt56solなどが暴走し本番dbに侵入itmedianews",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE13MVFuUGtPR3dnZjN5SFBseGtxLUlhSUF0VGFzQU00eTd6SHlrc0M1d1VCVDNDODBqaWRmdkM1RF9RVGtqM2ZaVElwbmk4U0t0dXN6aVdwVnNhSmFjNUJvRmhjWVFvQzU1clE?oc=5",
+  "title_key": "株式会社アクト日本マイクロソフトとウェビナーを7月30日開催microsoft365copilotが切り拓く次世代ワークスタイルをライブ配信",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY2Z0RFNxZmFBaGs2UnFZa2UtNW5kSDJKMXY5MlRGYWpDMk9wQnVvTnBmalMyeV8xaEpBZ2R0LXczOXVrODBaVjZsWWdxVFJKak9iMnNraWVoaWdYM3J0UHR4RjAxajlsYTlubm50UXh1XzNlak1VZEZEZENrMlJzaGIzMVNhWnVKV2Y2bG9pcWbSAZYBQVVfeXFMUHRWNG5rb1NaR0RCU2NqNUNjek1mSnNmVVJNNGtTWGVWdURPNUxxQ1JNRFhVQk1tZlNKdHBpbElvU0lybXJqVEtTTzVwZGFrQllpaEwwXzZSWUJTenpBVUdnVTdRdjZkN3NERzZiaUtWX3ByQUVmWlpHTDNIcEkyZlB5aXVLang5OU9Xc2RVN3NjSDMzcUln?oc=5",
+  "title_key": "マイクロソフトmsftamdとのhelios拡大採用とcopilot需要の先で割安感はあるのか",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8yLTZvYy1yTGhzNS15R1FlYUhENGdnRUoyX3p6UUtWNk1rSWdtSnZEX0JGQXZLQk8xU0lpUVBmcmZJQ3UzM2pISWZmNVYzNUNlR1JjWWZWR0FFM3Vzd3JhNA?oc=5",
+  "title_key": "copilotに中国kimik3採用案microsoftが狙う推論費6億ドル削減",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51YVd0ODF1TjN3VWMxdHVkLUlLWHJ5ejVDVlExY3ZmTTlSbHRMQ0NTMHNYVkQ2QV83bzlHVkwtcVA1VU5SaHJHTG8weGVEdVFhVDMxOWM5bERTR2VwUFg0cDc1UW0wZXYyakcyNQ?oc=5",
+  "title_key": "anthropic著作権訴訟で史上最大2400億円和解金支払いへ学習利用はフェアユース認定",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9CS1hweV9adzN6YUVpWlhtVmhKbGVuWnhzUE5uSFc2SjE2Mm4tb1ZxTTI4eVlDUVJKNG91T09aRVlqX0dsSkt0Y0VxamVDWVdlUTk5ekt6ZjhYUTZ6Y1o1VXlucHJpb0tZa2J0aGdaQzF1ckFT?oc=5",
+  "title_key": "anthropicslack上で動作する新機能claudetag発表チーム利用可能で自律的にタスクを処理",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OaW5TMm5SYlFKTGtFQzJkV1BGUHB6Q2s4VXVCb01xWUpXazdWTlhzZklEdC1jMklpemhuQ0pPSW1mdFloNVNUTnRJSGZYTUtTOTdGdTlzamNJY2xPM1BMU3hyOHpVQkFKLTdwclFDUEtSVk1rR2M2Wm55S1o?oc=5",
+  "title_key": "anthropicがaiモデルclaudeのトレーニングに海賊版書籍を使った件で作家グループと和解するも一部の著者は和解を拒否",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0xMFliTmFuQkNDMVlpRWZFYzNlMm05OVNSTVVpdUdJSHN6T01ydmowc3A0STE5NENiU3Aybjh1RC1OeG5qLUJXdVkzajQ3a29vQWFr?oc=5",
+  "title_key": "2026年現場とaiwebコーダーミュージシャン編てけしゅん",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1waTYwQ3BSZTZvN1dPZ1MzMWI2b2N6eTM4UDR0TDFXSVpFa0dkNEdGWmptblg4ZWFPenhGeGNKY0xXdFFkV1FCUHlEZG1EQWVodFpKdWVfV0x3WTdnNWc3bFJQRlhmV3pYVGEyZTJn?oc=5",
+  "title_key": "aiに編集させる動画ツールpalmierproを試す小寺信良の週刊electriczooma",
+  "date": "2026-07-22"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE55anhhdERvYktDbVg0T0NRV2tWNS1INXp2Wm10NURCYTRqV21aVnZTeENNNG5QeU9sajdN?oc=5",
+  "title_key": "claude最新情報2026年7月17日fable5プロモ終了まで残り2日euaiact施行まで16日",
+  "date": "2026-07-22"
  }
 ]
