@@ -1,80 +1,5 @@
 [
  {
-  "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBITldLNjdGaFFXZUwwWmtkaWJfVHU0YUo1bmNGWWFZU2FGbjlaRFFvUnVfUEFDZFNFSGN6QUdJdHhPZ2hKbTJGVjhhQnlsNmV5YjFpTE41RHBlX2VGSjFqOU8tMDh6QQ?oc=5",
-  "title_key": "googlegeminiのwindowsアプリを提供開始",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5BNU5FNHZic09FMFhTZzBsVFpMWm1jM2VuSUViYzNiUjFybXprSTM0REExSW1vVEtselJVOFEwWVJTdUI2MEZwRGNkcEFnVy1OZEE?oc=5",
-  "title_key": "グーグルgeminiのwindowsアプリを公開altスペースで手軽に起動",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBHWlUycFphM0N5alJPQzVZWlhrNFBjT01KSUx2WE40cVE2ZGRSdXpPcFNmdTQ5MzZhVFRnTDlqaGYxSDNXcTNuMFU4LUFndVFXdjhFNGJTWHhxREE2a3o5dDZJcG9FR2dNcjMw?oc=5",
-  "title_key": "geminideepresearchとは使い方や料金を解説",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1kdjZTNGEtcGNZT1N5MXhKYTFnWWhIZVNLcDVDc3dfRDJYZncwYU5EajFhekhlbWIyRHJLd2pCclk1bEFNM3JHY201Tk42UkNMLVdEekpFWkc4Q2JyWHRPa1NWdV9aZzY1V3FYZVFoTVpDemdJWTBSX1Nsd054S2M?oc=5",
-  "title_key": "openai2026年のipoは実施せずアルトマンceoが非上場継続を明言",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE15bmlwWklWRV9LTFhKSFdZSUVEOExIVDNfaWxjbXRuT2NmSHczREZ1Tk9nM0hOVnJZWWpjM0dOTlpVcnl0Y1NnQkYyUFNnTnAtR3c?oc=5",
-  "title_key": "amazonchatgptに広告を配信aiで商品探しのニーズに対応",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPNzE0UzNPZ2M3YThEUHZJa0VkaVpKS2piWW8ybzZRcHhtUWtvOEliNlhRLWhoYUFnektyY29fbVRIS2pJdzJfODZtTmt2TzRRVkVDU1Y4ZzU3ZmRxSkJWaE0xdVJ0YUZhWEVyWkNNR0lvVFlTWG5nMEJRSEV5bzZNb3RBTjFNY0Zxd1R2bWlJbUlva3JENFY2NDJmVS01ZjExVG1aczhmTEdKdw?oc=5",
-  "title_key": "openaiの安全研究者が異例の警告aiを制御できなくなれば多くの人が命を落とす",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE00VFFHdjdIc2hETElJSTRLYmZURFpBTnBKbVlxTVBQNm1LRUthYmtIVkNsQk5JYjNLa0s3MjFqcENqMko3RUZQSXo0NXFoQi03S3ZyUkt1NVR0WENLSnFLOWY2TkQxdEY1cXc?oc=5",
-  "title_key": "ギブリーboxmicrosoftcopilotのセキュア文書活用ソリューションboxcopilotconnectを提供開始",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
-  "title_key": "githubcopilotappforbeginnersusingthediffterminalandbrowser",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9mM19fcWQxWFl6VmZCWEFfdldGV21oSEdEeHU2dUZGRjdvemlqX2xka0kyRVkwYmxRNWhXSG8wT0U4c1FiVm1QMTlsMm0tYkFsTnJUZjJPWVBaSjY4WjZ1MGdiZEppdTRYT1VyT2l2Zw?oc=5",
-  "title_key": "copilotkeyboardcopilotと会話できるデスクトップマスコットを搭載したマイクロソフト製ime",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBHMzJibFJ4ZFBWa2JWMWxXZ3FMLXFjenpmTW9NaXhMUEpLV1VOVzdwSlh2djV5T1pXRWtMT09DNnpaWGtKbDVPVTJPWU80Vmg2ZC1Z?oc=5",
-  "title_key": "sakanaaiがfuguultrav2およびfugumax発表一部astraやfable越えの性能",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNV8yX2pfZERRa2RYMUFib3Z4YW1YcElmamFTT0txQVEtOGlMcjVVUllqNnFNY0ZFeWJ6TE9MSGdxNnN5MkFYcEhQT1lkR0pvNFJOT3Z6amdtTWVmVGNiM1k5dWVMVmhEa1phbVdxcDdHQjg2ZlJiXzlOYWphWFVJQlhNcExJbzh4UVE?oc=5",
-  "title_key": "anthropic中国aiがclaudeを裏側で利用と報告kimideepseekのユーザー入力転送alibaba蒸留兵器開発にも悪用",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5NSlJ2ajlVVWVkTDYxbWhrOGN6RXZ2UDlBUEtRZFFzSlRpRDJnMkUxZTJQaUcyU2NUMFpqejRLMjNQSEwzVzZGNmZ3?oc=5",
-  "title_key": "2026年最新claudeの料金プランを解説claudecodeやapiの価格他ツールとの比較も",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://github.com/Kidus-M/MaruCheck",
-  "title_key": "showhnmarucheckindependentqaforaigeneratedcode",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://news.ycombinator.com/item?id=49645248",
-  "title_key": "isthereagenuinespaceforthedesktopaiassistantoritssolved",
-  "date": "2026-09-13"
- },
- {
-  "url": "https://www.rockysurf.com/",
-  "title_key": "showhnrockysurfopensourcecontrolplaneforcodingagentcloudvms",
-  "date": "2026-09-13"
- },
- {
   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE94SThhZ3Jpc2o1WjVJRk5uOTBncUxkZTRkN2lFejJ2U1VYWFJyb0hFUzVaVExmc1ZHTGJEYjk3d295cUZ1N3RaNkU0dVNFTXVZR0VIM2h2V2ZpclhGMlFBanJtT3ZIbndoNFE?oc=5",
   "title_key": "google会話を止めずに裏でタスクを実行する音声モデルgemini38live公開推論強化の上位版も",
   "date": "2026-09-16"
@@ -1548,5 +1473,80 @@
   "url": "https://twombly.app/",
   "title_key": "showhntwomblyacollaborativecanvasforyouragentsdesignexplorations",
   "date": "2026-11-10"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZ3dYM2xzZTUzcGxWQ1NyVl91ak5vbW5UNE1iclgySkdnd2thQVpLNWFpemtIUU0wMHc3Vl8zM0dwaTV2bXBPVnlENWxHT003TDVoVU1ibThFQUJiRlUtNHpCa1NzWEpUSTlUUFhmWHZkaEs2cFZhemFuY1BYNm91N05aWERvbDdDMVRnclNhM3pGUF80SVlKRTVjRXJVZ0U0RUVINHlB?oc=5",
+  "title_key": "geminiomni12flash高速で費用対効果に優れ信頼性の高い動画生成編集機能の一般提供を開始",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uRk9tRm5TS1p6OVR0d29XaU1vQ21wdzhOb25LR0JCWW4wclNuSUxDWUZ1bU5NNnpDYXlRdWo2QXNnOV83T01ER29jZEhYQUNObXY3SFk3aVJuMmg2Rk5QTnkyVnl5TVJza281b3lJcFJRSm5JRXg1XzBHN3hWMTQ?oc=5",
+  "title_key": "googleがgemini4hydrogen公開速い軽量モデルに日常のコーディングを任せて難しい判断だけ上位モデルへ検索にも搭載テクノエッジ",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fTEZkMlV4UkQweC0zUEZuUG5zRUJ0TzduNExRSTJSbDVRU2NrSnotR1ZjcXRZZllJN1puZkItTEJZT2Nid2JOdGgyTlp0eVgxcUdTS3FvQXdKNVlfd3hzQlZXdkk2bDZxcUE?oc=5",
+  "title_key": "google高速で低価格のgemini4hydrogen発表無料ユーザーも利用可能",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5xc0NneGZkY1FyNjJmQjhTTmd0elBjSzFJYmlPckFqV3dQSm9Ia1ZhMEQ0RkhzcTYxdVJBMDUyaHZDWHhic0RFcFBfLW8tRnE4czJ6NXRfYnFNVk40ZFluWVdfQUJSVVk2cGFNbV9LYnpneXR5ZTZXa0dYamV1M0U?oc=5",
+  "title_key": "m365障害chatgptclaudeのコネクタにも影響ほとんどのリクエストで動作しないitmedianews",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1NaWoyZ1Q2V3k4UlBsU2RjTFF2TzFtMklxLUhQU18wVllXdDBNaWFPRkNmN0dmMEl6UTRpUG92ZGREcHRpb0tZa1RhZkg5UDRNelA5SFpqd0I2Wm4yNnhVN2k2WG01WXc?oc=5",
+  "title_key": "businessesinchatgpt事業者として登録する",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5KT3FBbDgxcFdIR1FGZGQ0cFhhUHRVRm04RUNKdzFUZ0JNWGlGczUzYWZMeFltSTQ1ckFPZ3hYa1dlanhxUXNJeU1CZm96M013Z3VCQjd2NDA?oc=5",
+  "title_key": "chatgptspaceとは機能と使い方共有方法注意点を解説",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IV2tIenlTMXNlNHpsSUF0cUxLN2hXVDc3QUJabGpVLWN0UjU2UE45TDl6MGRfM2l2WEZVY3RSdERKVm1CaUZfQlREQlVVS3lUcWt5YnFtdGNYRVV6c2xJdklsSnFSaGVKaUk4dVFseTRWRVBTdUM5ekE2YkRiR3c?oc=5",
+  "title_key": "マイクロソフト365で大規模障害メールoutlookやaiサービスcopilotなど使えず復旧は未定",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5WTW5ZeklwZGxaaXAtam5UTWhnZEFFRkhyQ0JtNy1PVFpVdldRV3ZmZS1jSHR2aVBEUVo3RVh3R25EbUZEVXB2WkRIMmtkNDBIZ0Nj?oc=5",
+  "title_key": "outlookteamscopilotが同時不通microsoft365障害サーバー多数が予期せず停止",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93bUlhWUNYckNkOHV5QUZycnc2RFNBd1Q3QlVaQ0FzdGY4cUx0d1RJeXNPR0R1ZVdZSUtiMmJXYnp4N01nUVNHWmpoekw1ZWRNU1E?oc=5",
+  "title_key": "マイクロソフトのoutlookで大規模障害microsoft365copilotなどにも影響",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVzVFVkdsRkdBLXVtOWtkMjZsenZfR1BvaGoyUi1KZGdBWTV5T0tVUnZXaHIycy1XZ0hHeEhWNGx2WEduclhfZ2VxOGx1Tmd5N0o5U2l1eTY2MVF5S3FYeUwtdV9kNmFITDJqT3VudS1PZkRZT3lGaUVsV283UjJoTjlnODV6bGsxakw3RkZFZWlkUQ?oc=5",
+  "title_key": "anthropicがclaudemanagedagentsのセルフホスト版を発表プライベートベータで提供開始",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAwRGltaFg4eFppa3pRU0Z2by1xWm1Nb0l5ZFd5WGRHOGN3bHFHdmYxSTQ1NUM2VGlqckNnV3BuamN0WHFDWlhnMEg3eUVEVTJPME9HZjJjRnpDS0NxdFE?oc=5",
+  "title_key": "anthropicの株式は11月19日に取引開始日本でもipo抽選に参加可能",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNQUlhZ0tuYUVEOHhlQ0k4OVlFNXR3MkJSMl9kMndmMFY4d3RqcnZTNEd2ZURZczdVaTZaM0JMMTlabEQxWWpvQVVHZGJVTkdqQ280OEJETmo4QnFSU2xVaWVGcE1fRmRGSVUxVDBiRXhZN29KamJ5T2tONUhuWkNyNnl2TlEtYmRS?oc=5",
+  "title_key": "anthropicclaudemanagedagentsのセルフホストを顧客に提供",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE41QXpWVHNkU1J3a2JqNDZ0ZThGQ1Y0MkFlSWUwMFJ1SUpGamFjQkdGaWNWbEl5NFl4bVFVUzRkV29PdG9MNDB5RHgzNzBUUVdXT2hnSUduRjdhX2lyTUd4RmxxUUlCSlQza3Q4Qko1X1Njdw?oc=5",
+  "title_key": "aiに頼んだ仕事が止まっていたらすぐ気づけるセキュリティ重視のaiコーディングアプリulcodewindows版の提供を開始",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1JX2V3RWYtbzdxN2gwbmlEbktNbC1teGZqZW1Gc18yN2psVWtMbDU2X25OdXlVZnpNSURCbUMwN3B4YnM1a20wZmdkUm9henczQXE0Yk51Z3Z4TTJrd3MxamNGNTBxbGdWQWxFTA?oc=5",
+  "title_key": "unrealengine59megajampreviewが公開unrealmcpの強化生成aiの作業場unrealcanvasシーケンサーでのaiアニメーション",
+  "date": "2026-11-13"
+ },
+ {
+  "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5IR2RMbkk2blUtcWlxSS1KcjZuY3FxYUNnZTFxclBIbUdNZ0ZIV0FwSERMNFdvYnlzb09HeWxpdXJDLVp0REZfZElxNy13eVpJM2tmZlJaZEZZSHpWUzZZ?oc=5",
+  "title_key": "aiの判断人間の責任崩れる最終確認は人の前提aiとクリエイターのねじれた関係",
+  "date": "2026-11-13"
  }
 ]
